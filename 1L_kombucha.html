@@ -169,7 +169,6 @@
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Beneficios de Subscrição</a
               >
-              >
             </li>
           </ul>
         </div>
@@ -251,16 +250,44 @@
           <div class="mb-6">
             <label class="block text-gray-700 mb-2">Quantidade</label>
             <div class="flex items-center border rounded-md w-32">
-              <button class="px-3 py-2 hover:bg-gray-100">-</button>
+              <button
+                onclick="decrementQuantity()"
+                class="px-3 py-2 hover:bg-gray-100"
+              >
+                -
+              </button>
               <input
                 type="number"
+                id="quantity"
                 value="1"
-                class="w-full text-center focus:outline-none"
+                class="w-full text-center focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                 min="1"
+                readonly
               />
-              <button class="px-3 py-2 hover:bg-gray-100">+</button>
+              <button
+                onclick="incrementQuantity()"
+                class="px-3 py-2 hover:bg-gray-100"
+              >
+                +
+              </button>
             </div>
           </div>
+
+          <script>
+            function incrementQuantity() {
+              const input = document.getElementById("quantity");
+              const currentValue = parseInt(input.value);
+              input.value = currentValue + 1;
+            }
+
+            function decrementQuantity() {
+              const input = document.getElementById("quantity");
+              const currentValue = parseInt(input.value);
+              if (currentValue > 1) {
+                input.value = currentValue - 1;
+              }
+            }
+          </script>
 
           <!-- Add to Cart Button -->
           <div class="flex">
@@ -302,7 +329,7 @@
           </div>
 
           <!-- Expandable Details Sections -->
-          <div class="max-w-2xl">
+          <div class="w-full">
             <!-- Detalhes -->
             <button
               type="button"
@@ -328,7 +355,18 @@
             </button>
             <div id="detalhes" class="hidden">
               <div class="py-5 border-b border-gray-200">
-                <p class="mb-2 text-gray-500">Content for Detalhes...</p>
+                <p class="mb-2 text-gray-500">
+                  <strong>100% Natural</strong><br /><br />
+                  As Kombuchas da Sõsu são produzidas de forma 100% natural,
+                  utilizando ingredientes de qualidade. Sem conservantes
+                  artificiais, corantes ou adoçantes. A fermentação é realizada
+                  através de métodos artesanais, permitindo que cada lote atinja
+                  a sua máxima qualidade e sabor. Além disso, o gás natural
+                  resultante do processo de fermentação confere à nossa kombucha
+                  uma efervescência suave, tornando-a uma alternativa
+                  refrescante para as suas bebidas habituais. Não pasteurizada,
+                  não filtrada, sem álcool. Conservar entre 2º a 5ºC.
+                </p>
               </div>
             </div>
 
@@ -357,7 +395,13 @@
             </button>
             <div id="como-consumir" class="hidden">
               <div class="py-5 border-b border-gray-200">
-                <p class="mb-2 text-gray-500">Content for Como consumir...</p>
+                <p class="mb-2 text-gray-500">
+                  Recomendamos beber diariamente um copo em jejum (de manhã ou à
+                  noite antes de ir dormir) para sentires mais os efeito
+                  benéficos desta bebida. Mas sendo a kombucha um chá, esta pode
+                  ser consumida a qualquer momento e em quantidades que te façam
+                  sentir bem.
+                </p>
               </div>
             </div>
 
@@ -386,7 +430,33 @@
             </button>
             <div id="perfeito-para" class="hidden">
               <div class="py-5 border-b border-gray-200">
-                <p class="mb-2 text-gray-500">Content for Perfeito para...</p>
+                <p class="mb-2 text-gray-500">
+                  <strong
+                    >Pessoas que procuram alternativas saudáveis de
+                    bebidas:</strong
+                  ><br />
+                  A kombucha é frequentemente vista como uma opção mais saudável
+                  em comparação com refrigerantes e sumos industrializados
+                  devido aos seus potenciais benefícios à saúde.
+                  <br /><strong>Quem se preocupa com a saúde digestiva:</strong>
+                  A kombucha é fermentada com bactérias e leveduras probióticas,
+                  que podem promover um equilíbrio saudável da flora intestinal
+                  e auxiliar na digestão.
+                  <br /><strong
+                    >Satisfazer aquele desejo de doces sem comprometer a
+                    saúde:</strong
+                  >
+                  A kombucha pode ser uma alternativa satisfatória para
+                  satisfazer desejos por doces, proporcionando uma opção
+                  refrescante e saudável em vez de recorrer a alimentos
+                  altamente processados e açucarados.<br /><strong
+                    >Pessoas interessadas em reforçar o sistema
+                    imunitário:</strong
+                  >
+                  Os probióticos e antioxidantes presentes na kombucha podem
+                  ajudar a fortalecer o sistema imunológico, contribuindo para
+                  uma resposta mais eficaz do corpo às infecções e doenças.
+                </p>
               </div>
             </div>
 
@@ -415,7 +485,20 @@
             </button>
             <div id="ingredientes" class="hidden">
               <div class="py-5 border-b border-gray-200">
-                <p class="mb-2 text-gray-500">Content for Ingredientes...</p>
+                <p class="mb-2 text-gray-500">
+                  <strong>Limão e Hortelã:</strong> Água, açúcar de cana*, chá
+                  verde biológico, cultura simbiótica de bactérias e leveduras,
+                  limão, hortelã.
+
+                  <br /><strong>Gengibre:</strong> Água, açúcar de cana*, chá
+                  verde biológico, cultura simbiótica de bactérias e leveduras,
+                  gengibre.
+
+                  <br /><strong>Medronho:</strong>Água, açúcar de cana*, chá
+                  verde biológico, cultura simbiótica de bactérias e leveduras,
+                  medronho <br /><br />*O açúcar é consumido quase na totalidade
+                  no processo de fermentação.
+                </p>
               </div>
             </div>
           </div>
@@ -460,6 +543,40 @@
       </div>
     </div>
 
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-xl">
+        <!-- Left side - Image -->
+        <div class="bg-gray-200 h-[450px]">
+          <img
+            src="Assests/sosu-subscricao.webp"
+            alt="Sōsu Kombucha bottles in crates"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Right side - Content -->
+        <div class="bg-[#fdf5e6] p-12 lg:p-16 flex flex-col justify-center">
+          <h2 class="text-3xl font-medium mb-6 text-gray-900">
+            Subscreve e usufrui de portes grátis + desconto por litro!
+          </h2>
+
+          <p class="text-gray-700 mb-8">
+            Subscreve uma vez e nós tratamos de fazer chegar a tua casa, todos
+            os meses, a tua Kombucha de qualidade. Ao subscreveres recebes
+            portes grátis, desconto por litro e acesso prioritário a sabores
+            limitados.
+          </p>
+
+          <a
+            href="#"
+            class="inline-block bg-[#3C4E37] text-white px-8 py-3 w-fit hover:bg-[#2C3E27] transition-colors"
+          >
+            Subscrever
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!--Footer-->
     <footer class="container mx-auto px-4 py-12 border-t">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -497,19 +614,6 @@
             <li>
               <a href="politica.html" class="text-gray-600 hover:text-gray-900"
                 >Política de privacidade</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-600 hover:text-gray-900">Cookies</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-600 hover:text-gray-900"
-                >Entregas e Devoluções</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-600 hover:text-gray-900"
-                >Livro de reclamações</a
               >
             </li>
           </ul>

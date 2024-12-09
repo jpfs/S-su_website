@@ -174,6 +174,78 @@
       </div>
     </nav>
 
+    <!-- Contact Form -->
+    <div class="bg-[#3C4E37] py-8">
+      <!-- Changed from py-16 to py-8 -->
+      <div class="mx-auto max-w-7xl px-4">
+        <h1 class="text-5xl text-center text-white mb-8">Contactos</h1>
+        <!-- Changed from mb-16 to mb-8 -->
+
+        <form action="#" method="POST" class="max-w-2xl mx-auto">
+          <div class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+            <!-- Changed gap-y-6 to gap-y-4 -->
+            <!-- Name Field -->
+            <div>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                autocomplete="given-name"
+                placeholder="Nome"
+                class="w-full px-4 py-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-white"
+              />
+            </div>
+
+            <!-- Email Field -->
+            <div>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="email"
+                placeholder="E-mail *"
+                required
+                class="w-full px-4 py-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-white"
+              />
+            </div>
+
+            <!-- Phone Field - Full Width -->
+            <div class="sm:col-span-2">
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                autocomplete="tel"
+                placeholder="Número de telefone"
+                class="w-full px-4 py-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-white"
+              />
+            </div>
+
+            <!-- Message Field - Full Width -->
+            <div class="sm:col-span-2">
+              <textarea
+                name="message"
+                id="message"
+                rows="6"
+                placeholder="Comentário"
+                class="w-full px-4 py-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:border-white resize-none"
+              ></textarea>
+            </div>
+          </div>
+          <!-- Submit Button -->
+          <div class="mt-6">
+            <!-- Changed from mt-8 to mt-6 -->
+            <button
+              type="submit"
+              class="px-8 py-3 bg-[#fdf5e6] text-[#3C4E37] rounded hover:bg-[#f5e6d3] transition-colors"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!--Footer-->
     <footer class="container mx-auto px-4 py-12 border-t">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -211,19 +283,6 @@
             <li>
               <a href="politica.html" class="text-gray-600 hover:text-gray-900"
                 >Política de privacidade</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-600 hover:text-gray-900">Cookies</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-600 hover:text-gray-900"
-                >Entregas e Devoluções</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-600 hover:text-gray-900"
-                >Livro de reclamações</a
               >
             </li>
           </ul>
