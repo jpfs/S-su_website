@@ -164,15 +164,221 @@
             </li>
             <li>
               <a
-                href="contatos.html"
+                href="subs_bene.html"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Contactos</a
+                >Beneficios de Subscrição</a
               >
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- Produtos -->
+    <div class="container mx-auto px-4 py-8">
+      <!-- Header and Filters -->
+      <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+        <h1 class="text-4xl font-medium mb-4 md:mb-0">Nossa loja</h1>
+
+        <!-- Sort Dropdown -->
+        <select
+          id="sort"
+          class="bg-white border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-gray-500"
+        >
+          <option value="">Ordenar por</option>
+          <option value="price-asc">Preço: Menor para Maior</option>
+          <option value="price-desc">Preço: Maior para Menor</option>
+          <option value="name-asc">Nome: A-Z</option>
+          <option value="name-desc">Nome: Z-A</option>
+        </select>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Product Card 1 -->
+        <div class="group relative">
+          <a href="1L_kombucha.html" class="block">
+            <!-- Product Image with Hover Effect -->
+            <div
+              class="relative aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 mb-4"
+            >
+              <img
+                src="Assests/Gengibre_1L.png"
+                alt="Sōsu Kombucha 1L"
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+              />
+              <!-- Hover Overlay with Description -->
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4"
+              >
+                <p class="text-white text-center">
+                  Uma bebida probiótica naturalmente fermentada, repleta de
+                  antioxidantes e enzimas benéficas para o seu bem-estar.
+                </p>
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="transition-all duration-300 group-hover:translate-y-1">
+              <h3 class="text-lg font-medium mb-2">Sōsu Kombucha 1L</h3>
+              <div class="flex items-center gap-2">
+                <span class="font-medium">€6,00 EUR</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="group relative">
+          <a href="#" class="block">
+            <!-- Product Image with Hover Effect -->
+            <div
+              class="relative aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 mb-4"
+            >
+              <img
+                src="Assests/Sõsu_kombucha_medronho_1Lx4.png"
+                alt="Pack My Kombucha"
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+              />
+              <!-- Hover Overlay with Description -->
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4"
+              >
+                <p class="text-white text-center">
+                  Pack especial com quatro garrafas de 1L. A quantidade perfeita
+                  para o consumo mensal.
+                </p>
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="transition-all duration-300 group-hover:translate-y-1">
+              <h3 class="text-lg font-medium mb-2">
+                Pack My Kombucha - 4 x 1L
+              </h3>
+              <span class="font-medium">€24,00 EUR</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="group relative">
+          <a href="#" class="block">
+            <!-- Sale Badge -->
+            <span
+              class="absolute top-2 right-2 bg-yellow-400 px-3 py-1 text-sm z-10"
+            >
+              Em promoção
+            </span>
+
+            <!-- Product Image with Hover Effect -->
+            <div
+              class="relative aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 mb-4"
+            >
+              <img
+                src="Assests/sõsu_kombucha_LH_300mlx3.png"
+                alt="Pack Degustação"
+                class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+              />
+              <!-- Hover Overlay with Description -->
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4"
+              >
+                <p class="text-white text-center">
+                  Pack de degustação com quatro garrafas de 330ml. Perfeito para
+                  descobrir o seu sabor favorito.
+                </p>
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="transition-all duration-300 group-hover:translate-y-1">
+              <h3 class="text-lg font-medium mb-2">
+                Pack Degustação 4 x 330ml
+              </h3>
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400 line-through">€10,80 EUR</span>
+                <span class="font-medium">€9,99 EUR</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product Card 2 (repeat the structure with different content) -->
+        <!-- Add more product cards following the same pattern -->
+      </div>
+    </div>
+
+    <!-- Simple JavaScript for sorting -->
+    <script>
+      document.getElementById("sort").addEventListener("change", function (e) {
+        const value = e.target.value;
+        const productsGrid = document.querySelector(".grid");
+        const products = Array.from(productsGrid.children);
+
+        products.sort((a, b) => {
+          const aPrice = parseFloat(
+            a.querySelector(".font-medium").textContent.replace("€", "")
+          );
+          const bPrice = parseFloat(
+            b.querySelector(".font-medium").textContent.replace("€", "")
+          );
+          const aName = a.querySelector("h3").textContent;
+          const bName = b.querySelector("h3").textContent;
+
+          switch (value) {
+            case "price-asc":
+              return aPrice - bPrice;
+            case "price-desc":
+              return bPrice - aPrice;
+            case "name-asc":
+              return aName.localeCompare(bName);
+            case "name-desc":
+              return bName.localeCompare(aName);
+            default:
+              return 0;
+          }
+        });
+
+        products.forEach((product) => productsGrid.appendChild(product));
+      });
+    </script>
+
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-xl">
+        <!-- Left side - Image -->
+        <div class="bg-gray-200 h-[450px]">
+          <img
+            src="Assests/sosu-subscricao.webp"
+            alt="Sōsu Kombucha bottles in crates"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Right side - Content -->
+        <div
+          class="bg-[#3C4E37] p-12 lg:p-16 flex flex-col justify-center text-white"
+        >
+          <h2 class="text-3xl font-medium mb-6">
+            Subscreve e usufrui de portes grátis + desconto por litro!
+          </h2>
+
+          <p class="text-gray-200 mb-8">
+            Subscreve uma vez e nós tratamos de fazer chegar a tua casa, todos
+            os meses, a tua Kombucha de qualidade. Ao subscreveres recebes
+            portes grátis, desconto por litro e acesso prioritário a sabores
+            limitados.
+          </p>
+
+          <a
+            href="#"
+            class="inline-block bg-white text-[#3C4E37] px-8 py-3 w-fit hover:bg-gray-100 transition-colors"
+          >
+            Subscrever
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!--Footer-->
     <footer class="container mx-auto px-4 py-12 border-t">
