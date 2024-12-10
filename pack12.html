@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sõsu Kombucha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="home.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img src="/Assests/Sosu_Black.avif" class="h-8" alt="Sosu Logo" />
+        </a>
+        <button
+          data-collapse-toggle="navbar-dropdown"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-dropdown"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="home.html"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <button
+                id="dropdownNavbarLink_1"
+                data-dropdown-toggle="dropdownNavbar_1"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+              >
+                Comprar
+                <svg
+                  class="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar_1"
+                class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="comprar.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Todos os produtos</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="pack_mensal.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Pack Mensal</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="novidades.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Novidades</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button
+                id="dropdownNavbarLink_2"
+                data-dropdown-toggle="dropdownNavbar_2"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+              >
+                Sobre
+                <svg
+                  class="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar_2"
+                class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="benefcios.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Benefícios da Kombucha</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="porque.html"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Porquê a Sõsu</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                href="subs_bene.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Beneficios de Subscrição</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mx-auto max-w-6xl px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 justify-center">
+        <!-- Left Column - Product Images -->
+        <div class="flex flex-col items-center">
+          <!-- Main Product Image -->
+          <div class="mb-4 max-w-md">
+            <img
+              src="Assests/Gengibre_300ml_x12.png"
+              alt="Sōsu Kombucha 1L"
+              class="w-full rounded-lg"
+            />
+          </div>
+          <!-- Thumbnail Images Grid -->
+          <div class="grid grid-cols-4 gap-2 max-w-md">
+            <button
+              class="border rounded-lg overflow-hidden hover:opacity-75 transition-opacity"
+            >
+              <img
+                src="Assests/sõsu_kombucha_LH_300mlx3.png"
+                alt="Thumbnail 1"
+                class="w-full"
+              />
+            </button>
+            <button
+              class="border rounded-lg overflow-hidden hover:opacity-75 transition-opacity"
+            >
+              <img
+                src="Assests/DSCF4150.JPG"
+                alt="Thumbnail 2"
+                class="w-full"
+              />
+            </button>
+            <!-- Add more thumbnails as needed -->
+          </div>
+        </div>
+
+        <!-- Right Column - Product Info -->
+        <div class="flex flex-col items-center md:items-start">
+          <!-- Content remains the same, just added centering classes -->
+          <h1 class="text-2xl mb-4 text-center md:text-left">
+            Pack 12 garrafas x 330ml
+          </h1>
+          <p class="mb-6 text-center md:text-left">
+            3 sabores à escolha: Limão-Hortelã, Gengibre e Medronho
+          </p>
+
+          <!-- Product Price -->
+          <p class="text-xl mb-8">€28.99 EUR</p>
+
+          <!-- Flavor Selector -->
+          <div class="mb-6">
+            <label class="block text-gray-700 mb-2">Sabor</label>
+            <div class="flex gap-2">
+              <button
+                class="px-4 py-2 border rounded-md hover:bg-gray-50 focus:ring-2 focus:ring-[#3C4E37] focus:outline-none"
+              >
+                Limão-Hortelã
+              </button>
+              <button
+                class="px-4 py-2 border rounded-md hover:bg-gray-50 focus:ring-2 focus:ring-[#3C4E37] focus:outline-none"
+              >
+                Gengibre
+              </button>
+              <button
+                class="px-4 py-2 border rounded-md hover:bg-gray-50 focus:ring-2 focus:ring-[#3C4E37] focus:outline-none"
+              >
+                Medronho
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Quantity -->
+          <div class="mb-6">
+            <label class="block text-gray-700 mb-2">Quantidade</label>
+            <div class="flex items-center border rounded-md w-32">
+              <button
+                onclick="decrementQuantity()"
+                class="px-3 py-2 hover:bg-gray-100"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                id="quantity"
+                value="1"
+                class="w-full text-center focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                min="1"
+                readonly
+              />
+              <button
+                onclick="incrementQuantity()"
+                class="px-3 py-2 hover:bg-gray-100"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <script>
+            function incrementQuantity() {
+              const input = document.getElementById("quantity");
+              const currentValue = parseInt(input.value);
+              input.value = currentValue + 1;
+            }
+
+            function decrementQuantity() {
+              const input = document.getElementById("quantity");
+              const currentValue = parseInt(input.value);
+              if (currentValue > 1) {
+                input.value = currentValue - 1;
+              }
+            }
+          </script>
+
+          <!-- Add to Cart Button -->
+          <div class="flex">
+            <button
+              class="bg-[#3C4E37] text-white py-3 px-12 rounded hover:bg-[#2C3E27] transition-colors mb-8 mx-auto md:mx-0"
+            >
+              Adicionar ao carrinho
+            </button>
+          </div>
+
+          <!-- Pickup Information -->
+          <div class="mb-8">
+            <div class="flex items-start gap-2">
+              <svg
+                class="w-5 h-5 text-green-500 mt-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              <div>
+                <p class="font-medium">Recolha disponível em Fábrica - Sertã</p>
+                <p class="text-gray-600 text-sm mt-1">
+                  Normalmente pronto em 24 horas
+                </p>
+                <a
+                  href="#"
+                  class="text-gray-600 text-sm underline mt-2 inline-block"
+                  >Ver informações da loja</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Expandable Details Sections -->
+          <div class="w-full">
+            <!-- Detalhes -->
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 border-b border-gray-200 hover:bg-gray-50"
+              data-accordion-target="#detalhes"
+              aria-expanded="false"
+              aria-controls="detalhes"
+            >
+              <span>Detalhes</span>
+              <svg
+                class="w-6 h-6 rotate-0 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div id="detalhes" class="hidden">
+              <div class="py-5 border-b border-gray-200">
+                <p class="mb-2 text-gray-500">
+                  <strong>100% Natural</strong><br /><br />
+                  As Kombuchas da Sõsu são produzidas de forma 100% natural,
+                  utilizando ingredientes de qualidade. Sem conservantes
+                  artificiais, corantes ou adoçantes. A fermentação é realizada
+                  através de métodos artesanais, permitindo que cada lote atinja
+                  a sua máxima qualidade e sabor. Além disso, o gás natural
+                  resultante do processo de fermentação confere à nossa kombucha
+                  uma efervescência suave, tornando-a uma alternativa
+                  refrescante para as suas bebidas habituais. Não pasteurizada,
+                  não filtrada, sem álcool. Conservar entre 2º a 5ºC.
+                </p>
+              </div>
+            </div>
+
+            <!-- Como consumir -->
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 border-b border-gray-200 hover:bg-gray-50"
+              data-accordion-target="#como-consumir"
+              aria-expanded="false"
+              aria-controls="como-consumir"
+            >
+              <span>Como consumir</span>
+              <svg
+                class="w-6 h-6 rotate-0 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div id="como-consumir" class="hidden">
+              <div class="py-5 border-b border-gray-200">
+                <p class="mb-2 text-gray-500">
+                  Recomendamos beber diariamente um copo em jejum (de manhã ou à
+                  noite antes de ir dormir) para sentires mais os efeito
+                  benéficos desta bebida. Mas sendo a kombucha um chá, esta pode
+                  ser consumida a qualquer momento e em quantidades que te façam
+                  sentir bem.
+                </p>
+              </div>
+            </div>
+
+            <!-- Perfeito para -->
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 border-b border-gray-200 hover:bg-gray-50"
+              data-accordion-target="#perfeito-para"
+              aria-expanded="false"
+              aria-controls="perfeito-para"
+            >
+              <span>Perfeito para</span>
+              <svg
+                class="w-6 h-6 rotate-0 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div id="perfeito-para" class="hidden">
+              <div class="py-5 border-b border-gray-200">
+                <p class="mb-2 text-gray-500">
+                  <strong
+                    >Pessoas que procuram alternativas saudáveis de
+                    bebidas:</strong
+                  ><br />
+                  A kombucha é frequentemente vista como uma opção mais saudável
+                  em comparação com refrigerantes e sumos industrializados
+                  devido aos seus potenciais benefícios à saúde.
+                  <br /><strong>Quem se preocupa com a saúde digestiva:</strong>
+                  A kombucha é fermentada com bactérias e leveduras probióticas,
+                  que podem promover um equilíbrio saudável da flora intestinal
+                  e auxiliar na digestão.
+                  <br /><strong
+                    >Satisfazer aquele desejo de doces sem comprometer a
+                    saúde:</strong
+                  >
+                  A kombucha pode ser uma alternativa satisfatória para
+                  satisfazer desejos por doces, proporcionando uma opção
+                  refrescante e saudável em vez de recorrer a alimentos
+                  altamente processados e açucarados.<br /><strong
+                    >Pessoas interessadas em reforçar o sistema
+                    imunitário:</strong
+                  >
+                  Os probióticos e antioxidantes presentes na kombucha podem
+                  ajudar a fortalecer o sistema imunológico, contribuindo para
+                  uma resposta mais eficaz do corpo às infecções e doenças.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ingredientes -->
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 border-b border-gray-200 hover:bg-gray-50"
+              data-accordion-target="#ingredientes"
+              aria-expanded="false"
+              aria-controls="ingredientes"
+            >
+              <span>Ingredientes</span>
+              <svg
+                class="w-6 h-6 rotate-0 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div id="ingredientes" class="hidden">
+              <div class="py-5 border-b border-gray-200">
+                <p class="mb-2 text-gray-500">
+                  <strong>Limão e Hortelã:</strong> Água, açúcar de cana*, chá
+                  verde biológico, cultura simbiótica de bactérias e leveduras,
+                  limão, hortelã.
+
+                  <br /><strong>Gengibre:</strong> Água, açúcar de cana*, chá
+                  verde biológico, cultura simbiótica de bactérias e leveduras,
+                  gengibre.
+
+                  <br /><strong>Medronho:</strong>Água, açúcar de cana*, chá
+                  verde biológico, cultura simbiótica de bactérias e leveduras,
+                  medronho <br /><br />*O açúcar é consumido quase na totalidade
+                  no processo de fermentação.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            document
+              .querySelectorAll("[data-accordion-target]")
+              .forEach((button) => {
+                button.addEventListener("click", () => {
+                  const targetId = button.getAttribute("data-accordion-target");
+                  const content = document.querySelector(targetId);
+                  const arrow = button.querySelector("svg");
+
+                  // Toggle content
+                  content.classList.toggle("hidden");
+
+                  // Rotate arrow
+                  if (content.classList.contains("hidden")) {
+                    arrow.style.transform = "rotate(0deg)";
+                  } else {
+                    arrow.style.transform = "rotate(180deg)";
+                  }
+
+                  // Update aria-expanded
+                  button.setAttribute(
+                    "aria-expanded",
+                    content.classList.contains("hidden") ? "false" : "true"
+                  );
+                });
+              });
+          </script>
+
+          <!-- Shipping Info -->
+          <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-lg font-medium mb-2">Informação de envio:</h3>
+            <p>
+              Portes grátis em compras superiores a €30. Entrega em 2-3 dias
+              úteis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-xl">
+        <!-- Left side - Image -->
+        <div class="bg-gray-200 h-[450px]">
+          <img
+            src="Assests/sosu-subscricao.webp"
+            alt="Sōsu Kombucha bottles in crates"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Right side - Content -->
+        <div class="bg-[#fdf5e6] p-12 lg:p-16 flex flex-col justify-center">
+          <h2 class="text-3xl font-medium mb-6 text-gray-900">
+            Subscreve e usufrui de portes grátis + desconto por litro!
+          </h2>
+
+          <p class="text-gray-700 mb-8">
+            Subscreve uma vez e nós tratamos de fazer chegar a tua casa, todos
+            os meses, a tua Kombucha de qualidade. Ao subscreveres recebes
+            portes grátis, desconto por litro e acesso prioritário a sabores
+            limitados.
+          </p>
+
+          <a
+            href="subs_bene.html"
+            class="inline-block bg-[#3C4E37] text-white px-8 py-3 w-fit hover:bg-[#2C3E27] transition-colors"
+          >
+            Subscrever
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="container mx-auto px-4 py-12 border-t">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Column 1 - Sobre -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Sobre</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="benefcios.html" class="text-gray-600 hover:text-gray-900"
+                >O que é Kombucha?</a
+              >
+            </li>
+            <li>
+              <a href="porque.html" class="text-gray-600 hover:text-gray-900"
+                >Porquê escolher a Sōsu?</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2 - Ajuda -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Ajuda</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="contatos.html" class="text-gray-600 hover:text-gray-900"
+                >Contactos</a
+              >
+            </li>
+            <li>
+              <a href="condiçoes.html" class="text-gray-600 hover:text-gray-900"
+                >Termos e Condições</a
+              >
+            </li>
+            <li>
+              <a href="politica.html" class="text-gray-600 hover:text-gray-900"
+                >Política de privacidade</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3 - Sōsu Kombucha -->
+        <div>
+          <h3 class="text-lg font-medium mb-4">Sōsu Kombucha</h3>
+          <address class="not-italic text-gray-600">
+            <p>SerQ, Rua J, Nº9, Zona Industrial da Sertã</p>
+            <p class="mt-2">6100-711 Sertã</p>
+            <p class="mt-4 font-medium">Produzida no centro de Portugal</p>
+          </address>
+        </div>
+
+        <!-- Column 4 - Logos -->
+        <div class="flex flex-col items-end gap-6 mr-4">
+          <img src="/Assests/cataa-logo.png" alt="CATAA" class="h-12" />
+          <img src="Assests/aproser logo.png" alt="APROSER" class="h-20" />
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="flex justify-end mt-12 pt-8 border-t">
+        <!-- Social Media Links -->
+        <div class="flex gap-4">
+          <a
+            href="https://www.facebook.com/profile.php?id=100086956191733"
+            class="text-gray-600 hover:text-gray-900"
+          >
+            <span class="sr-only">Facebook</span>
+            <!-- Facebook Icon -->
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/sosu.kombucha/"
+            class="text-gray-600 hover:text-gray-900"
+          >
+            <span class="sr-only">Instagram</span>
+            <!-- Instagram Icon -->
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
