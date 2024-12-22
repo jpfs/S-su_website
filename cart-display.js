@@ -27,6 +27,11 @@ function renderCart() {
     // Define a imagem e texto alt
     const img = clone.querySelector("img");
     function normalizeImageName(flavor) {
+      // Se for o pack degustação, retorna o caminho específico
+      if (flavor === "Mix") {
+        return "M_300ml_x4";
+      }
+
       return flavor
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "") // Remove acentos
@@ -148,3 +153,51 @@ function proceedToCheckout() {
 
 // Renderiza o carrinho quando a página carrega
 document.addEventListener("DOMContentLoaded", renderCart);
+
+// Função para mostrar o popup
+function showAddedToCartPopup(product) {
+  const popup = document.getElementById("addedToCartPopup");
+  const image = document.getElementById("popupProductImage");
+  const name = document.getElementById("popupProductName");
+  const options = document.getElementById("popupProductOptions");
+
+  // Atualiza o conteúdo do popup
+  image.src = `Assests/${normalizeImageName(product.flavor)}_${
+    product.volume
+  }.png`;
+  name.textContent = product.name;
+  options.textContent = `Opções disponíveis : Pack ${product.volume}`;
+
+  // Mostra o popup
+  popup.classList.remove("hidden");
+
+  // Previne o scroll da página
+  document.body.style.overflow = "hidden";
+}
+
+// Função para fechar o popup
+function closePopup() {
+  const popup = document.getElementById("addedToCartPopup");
+  popup.classList.add("hidden");
+  document.body.style.overflow = "";
+}
+
+// Modifica a função addToCart existente para mostrar o popup
+function addToCart(productId, name, price, volume, flavor) {
+  const quantityInput = document.getElementById("quantity");
+  const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+
+  const product = {
+    id: productId,
+    name: name,
+    price: parseFloat(price),
+    quantity: quantity,
+    volume: volume,
+    flavor: flavor,
+  };
+
+  cart.addItem(product);
+
+  // Mostra o popup
+  showAddedToCartPopup(product);
+}

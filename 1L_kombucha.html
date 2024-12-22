@@ -11,6 +11,22 @@
     />
     <script src="cart.js"></script>
     <script src="flavor-selection.js"></script>
+    <script src="cart-display.js"></script>
+
+    <style>
+      #addedToCartPopup {
+        animation: fadeIn 0.3s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -192,6 +208,85 @@
         </div>
       </div>
     </nav>
+
+    <!-- Popup de Item Adicionado -->
+    <div
+      id="addedToCartPopup"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full mx-4">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-center text-green-600">
+            <svg
+              class="w-6 h-6 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              ></path>
+            </svg>
+            <span>Item adicionado ao seu carrinho</span>
+          </div>
+          <button
+            onclick="closePopup()"
+            class="text-gray-400 hover:text-gray-600"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex items-start space-x-4 mb-4">
+          <img
+            id="popupProductImage"
+            src=""
+            alt=""
+            class="w-20 h-20 object-cover rounded"
+          />
+          <div>
+            <h3 id="popupProductName" class="font-medium"></h3>
+            <p id="popupProductOptions" class="text-sm text-gray-600 mt-1"></p>
+          </div>
+        </div>
+
+        <div class="flex flex-col space-y-2">
+          <button
+            onclick="window.location.href='carrinho_compras.html'"
+            class="w-full bg-[#3C4E37] text-white py-2 px-4 rounded hover:bg-[#2C3E27] transition-colors"
+          >
+            Ver carrinho (1)
+          </button>
+          <button
+            onclick="closePopup()"
+            class="w-full border border-[#3C4E37] text-[#3C4E37] py-2 px-4 rounded hover:bg-gray-50 transition-colors"
+          >
+            Continuar a comprar
+          </button>
+          <button
+            onclick="window.location.href='#'"
+            class="w-full bg-[#3C4E37] text-white py-2 px-4 rounded hover:bg-[#2C3E27] transition-colors"
+          >
+            Finalizar a compra
+          </button>
+        </div>
+      </div>
+    </div>
 
     <div class="container mx-auto max-w-6xl px-4 py-12">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 justify-center">
